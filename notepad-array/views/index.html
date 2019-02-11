@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/papercss/dist/paper.css">
 </head>
 
 <body>
-    <h1>使用Node & Express 制作的留言板(Array版本)</h1>
-    {{each data}} <li>{{$value.name}} Say: {{$value.text}} </li><br> {{/each}}
-    <a href="./sendPage">Go</a>
+    <div align="center">
+
+        <h3>使用Node & Express 制作的留言板(Array版本)</h3>
+        {{each data}} <div class="lg-9 md-9 sm-6 col border border-primary"><div align="left">{{$value.time}} {{$value.name}}</div>{{$value.text}}</div><br>{{/each}}
+       <br>
+        <button>
+            <a href="./sendPage">GO</a>
+        </button>
+    </div>
 </body>
 
 </html>

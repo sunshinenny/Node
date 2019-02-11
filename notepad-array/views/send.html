@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/papercss/dist/paper.css">
 </head>
 
 <body>
-    <h1>在这里发送数据到留言板中</h1>
-    <hr>
-    <form action="send" method="get">
-        <input type="text" name="name" id="name" value="Hello"/>
-        <br>
-        <input type="text" name="text" id="text" value="World!"/>
+    <div align='center'>
 
-        <input type="submit" value="Submit">
+        <h3>这里发送数据到留言板中</h3>
+        <hr>
+        <form action="send" method="get">
+            <label for="name">What's your name?</label>
+            <input type="text" name="name" id="name" value="" />
+            <br>
+            <label for="text">Say What?</label>
+            <input type="text" name="text" id="text" value="" />
 
-    </form>
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
 </body>
 
 </html>
