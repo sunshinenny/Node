@@ -1,6 +1,7 @@
 var express=require('express')
 var notes = new Array() //用以存储留言
 var router=express.Router()
+var g_id=''
 
 // 3.配置路由
 router.get('/', function (req, res) {
@@ -23,4 +24,15 @@ router.get('/', function (req, res) {
         notes.unshift(req.query) // 处理逻辑,将新的留言加入到数组notes中
         res.redirect('./') // 重定向
     })
+    .get('/goRoom',function(req,res){
+
+	var id=req.query.room_id
+	console.log(id)
+	g_id=id
+console.log("This is g_id"+g_id)
+	res.redirect('./'+g_id)
+    })
+    .get('/'+g_id,function(req,res){
+res.send('Welcome to the '+g_id+' room')
+})
 module.exports=router

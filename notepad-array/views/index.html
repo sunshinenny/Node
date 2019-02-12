@@ -12,12 +12,20 @@
 <body>
     <div align="center">
 
-        <h3>使用Node & Express 制作的留言板(Array版本)</h3>
+        <h3>Chat with some friends</h3>
         {{each data}} <div class="lg-9 md-9 sm-6 col border border-primary"><div align="left">{{$value.time}} {{$value.name}}</div>{{$value.text}}</div><br>{{/each}}
        <br>
         <button>
             <a href="./sendPage">GO</a>
         </button>
+
+<form action='./goRoom' method='get'>
+<label for='room_id'>Please input the Room ID to chat with someone.</label>
+	<input type='text' name='room_id' value='2333' />
+<input type='submit' value='Go to room'/>
+
+
+</form>
     </div>
 </body>
 
