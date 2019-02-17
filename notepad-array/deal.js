@@ -30,7 +30,7 @@ exports.save = function (content, callback) {
     })
 }
 
-exports.get = function (callback) {
+exports.find = function (callback) {
     fs.readFile(dbPath, 'utf8', function (err, data) {
         if (err) {
             return callback(err)

@@ -1,0 +1,1 @@
+window.alert("This is express static doc")
